@@ -4,6 +4,7 @@ import android.util.Log
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.flow
+import java.lang.Exception
 
 class Engine (
     val cc: Int = 2000,
@@ -13,6 +14,7 @@ class Engine (
     ){
 
     suspend fun turnOn(): Flow<Int> {
+
         isTurnedOn = true
 
         return flow {
